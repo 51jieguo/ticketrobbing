@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<img id="img" src="" width="295" height="190"/>
+<input type="button" onclick="copyText();" value="sfsdfsdfds"></input>
+</body>
+</html>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+
+    $('#img').click(function(e) {
+        var xx = e.originalEvent.x || e.originalEvent.layerX || 0;
+        var yy = e.originalEvent.y || e.originalEvent.layerY || 0;
+        //$(this).text(xx + '---' + yy);
+        alert(xx+","+yy);
+    });
+
+    function copyText(){
+        $("#img").attr('src',"");
+        var html = $.ajax({
+            type: "POST",
+            url: "/getCaptcha",
+            data: "",
+            async: false
+        }).responseText;
+        $("#img").attr('src',"http://localhost/images/"+html);
+    }
+</script>

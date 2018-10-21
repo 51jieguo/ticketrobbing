@@ -30,18 +30,6 @@ public class HttpUtil {
     public static String cookie = "";
     public static Map<String,String> cookieMap = new HashMap<>();
     public static void main(String[] args) throws InterruptedException {
-        //String get = doGet("https://kyfw.12306.cn/passport/captcha/captcha-image?login_site=E&module=login&rand=sjrand&0.20088273869745750",null);
-        //_passport_ct=727e5eea09da405894029cb2627a147ft6019;
-        // _passport_session=c17c26662b9a459a9ece1657707b3f8a9328;
-        // RAIL_EXPIRATION=1536113054481;
-        // RAIL_DEVICEID=DwEooWZhf5bud3I5hg0hVbyi-FTiqZBbOTjPG6ThWsE4r6C8DqOgGlMsKxP6yCtrrt9Zl9ODbgfbvFPQ0BvUOOd_toTaFc-NOfjB2IwJ7MWv8kjUyfZ7t0aNAzPKpJdzllywmIbjOijztFuaKs4vIpoH0P5aEf3q;
-        // ten_js_key=hdjaWx2LhcaGWRlGBgdiDqBBehovd9Ja; ten_key=t5Mr1l5vpG6IFk4Oqypd3qTMdwUiOZJd;
-        // route=9036359bb8a8a461c164a04f8f50b252; BIGipServerpool_passport=233636362.50215.0000;
-        // BIGipServerpassport=904397066.50215.0000;
-        // BIGipServerotn=1324352010.64545.0000
-        //String get = doGet("https://kyfw.12306.cn/otn/login/init",null);
-        //System.out.print(get);
-        //Thread.sleep(5000);
         String get = doGet("https://kyfw.12306.cn/passport/captcha/captcha-image?login_site=E&module=login&rand=sjrand&0.20088273869745750",null);
 
         //answer=118%2C37%2C258%2C110&login_site=E&rand=sjrand
@@ -138,9 +126,6 @@ public class HttpUtil {
             }*/
 
         }
-
-
-
     }
 
     public static String doGet(String url,String charset){
